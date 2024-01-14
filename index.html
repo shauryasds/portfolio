@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shaurya's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    
+  </div>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <span class="logo">Shaurya</span>
+          
+          <ul class="list active">
+            <li class="cross">=></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="my-cv.pdf" download>CV</a></li>
+          </ul>
+          <span class="side_icon">=</span>
+        </nav>
+        <div class="headerText">
+          <p>Frontend Developer || Programmer</p>
+          <h1>
+            Hi , I am <br /><span class="bright">Shaurya Deep Shukla.</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <img src="/mying.jpg" alt="" />
+          </div>
+          <div class="col-2">
+            <h1 class="aboutText">About Me</h1>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              possimus in fuga magnam voluptatum harum! Cupiditate, inventore
+              aliquid ab sit corporis quibusdam! Praesentium tenetur dolore
+              atque magnam autem nisi sint.
+            </p>
+            <div class="tab-Titles">
+              <div class="tab-Links active-Link" id="1">Skills</div>
+              <div class="tab-Links" id="2">Experience</div>
+              <div class="tab-Links" id="3">Education</div>
+            </div>
+            <div class="tab-Contents tab-Active">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>BOOTSTRAP</li>
+                <li>JAVA</li>
+                <li>C-LANGUAGE</li>
+              </ul>
+            </div>
+            <div class="tab-Contents">
+              <ul>
+                <li><span>Campus Ambassador-Intern</span> <br />Internbug</li>
+              </ul>
+            </div>
+            <div class="tab-Contents">
+              <ul>
+                <li><span>B.Tech[CSE]</span> <br />Cgpa:8.55</li>
+                <li><span>12(10+2)</span> <br />Percentage:93%</li>
+                <li><span>B.Tech[CSE]</span> <br />Percentage:90.6%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- project -->
+    <div id="project">
+      <div class="container">
+        <div class="sub-title">
+          <h1>My Projects</h1>
+        </div>
+        <div class="project-List">
+          <div>
+            <img src="web.jpg" alt="" class="project-img" />
+            <h1>
+              Frontend <br />
+              web-development
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              labore dolore modi, velit consequuntur accusamus reiciendis
+              pariatur tempora ipsam commodi quaerat adipisci corporis eveniet
+              ducimus deserunt. Ipsa numquam quisquam tenetur!
+            </p>
+            <button class="learn-more"><a href="/">Learn More</a></button>
+          </div>
+          <div>
+            <img src="code.png" alt="" class="project-img" />
+            <h1>wordpress development</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              labore dolore modi, velit consequuntur accusamus reiciendis
+              pariatur tempora ipsam commodi quaerat adipisci corporis eveniet
+              ducimus deserunt. Ipsa numquam quisquam tenetur!
+            </p>
+            <button class="learn-more"><a href="/">Learn More</a></button>
+
+          </div>
+          <div>
+            <img src="code.png" alt="" class="project-img" />
+            <h1>JAVA <br />programming</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              labore dolore modi, velit consequuntur accusamus reiciendis
+              pariatur tempora ipsam commodi quaerat adipisci corporis eveniet
+              ducimus deserunt. Ipsa numquam quisquam tenetur!
+            </p>
+            <button class="learn-more"><a href="/">Learn More</a></button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- contact me -->
+
+
+
+
+    <div id="contact">
+      <div class="title"><h1>Contact me</h1></div>
+         <div class="container">
+          <div id="email"><i class="fa fa-envelope"></i>
+            <span>shauryadeep589@gmail.com</span></div>
+          <div id="phone">
+            <i class="fa fa-phone"></i><span>906773887</span> </div>
+            <div class="cv" id="cv"><a href="my-cv.pdf" download>Downlod CV</a></div>
+         </div>
+        
+    </div>
+    <footer>
+      <h3>copyright @shaurya deep shukla</h3>
+    </footer>
+
+    <script>
+      let side_icon=document.getElementsByClassName('side_icon');
+      let sidelist=document.getElementsByClassName('list');
+      let cross=document.getElementsByClassName('cross');
+      let tabcontents = Array.from(
+        document.getElementsByClassName("tab-Contents")
+      );
+      let tabLinks = Array.from(document.getElementsByClassName("tab-Links"));
+      tabLinks.forEach((e) => {
+        e.addEventListener("click", (ele) => {
+          if (e.classList.contains("active-Link")) {
+            e.classList.remove("active-Link");
+            tabcontents[e.id - 1].classList.remove("tab-Active");
+          } else {
+            tabLinks.forEach((element) => {
+              element.classList.remove("active-Link");
+            });
+            tabcontents.forEach((element) => {
+              element.classList.remove("tab-Active");
+            });
+            e.classList.add("active-Link");
+            tabcontents[e.id - 1].classList.add("tab-Active");
+          }
+        });
+      });
+      side_icon[0].addEventListener('click',(e)=>{
+        sidelist[0].style.right='0';
+        cross[0].style.display='block';
+        
+      })
+      cross[0].addEventListener('click',(e)=>{
+        sidelist[0].style.right='-400px';
+        cross[0].style.display='none';
+
+      })
+
+
+    </script>
+  </body>
+</html>

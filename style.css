@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: wheat;
+}
+#header {
+  width: 100%;
+  height: 54vw;
+  background: url(back.jpg) no-repeat 35vw 12vh/68%;
+}
+
+nav {
+  height: 12vh;
+  background-color: rgb(23 13 13);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 63px;
+  /* font-family: 'Poppins', sans-serif; */
+}
+.logo {
+  font-size: 4vw;
+  position: relative;
+}
+.logo::after {
+  content: "Deep Shukla";
+  font-size: 1.2vw;
+  display: none;
+  left: 4px;
+  bottom: -12px;
+  position: absolute;
+  transition: display 1s ease-in;
+}
+.logo:hover::after {
+  display: block;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  transition: display 2s;
+}
+nav ul li {
+  margin: 0 1.5vw;
+  font-size: 2.6vw;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: whitesmoke;
+}
+.side_icon{
+  display: none;
+}
+.cross{
+  display: none;
+}
+nav ul li a::after {
+  content: "";
+  background-color: red;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  transition: width 0.5s ease-in;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+.headerText {
+  margin-top: 11%;
+  margin-left: 4%;
+  color: white;
+  font-size: 3vw;
+}
+.headerText p {
+  margin-bottom: 4px;
+}
+
+/* --------------------------about-------------- */
+#about {
+  margin: 23vh;
+  font-size: 2vw;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.col-1 {
+  flex-basis: 30%;
+}
+
+.col-1 img {
+  width: 22vw;
+  height: 30vw;
+  background-color: chocolate;
+  border-radius: 15px;
+}
+.col-2 {
+  flex-basis: 60%;
+}
+
+.aboutText {
+  font-size: 3rem;
+  text-align: center;
+}
+.description {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 3vw;
+}
+.tab-Titles {
+  display: flex;
+  width: 2vw;
+  margin: 20px 0 40px;
+  cursor: pointer;
+  color: rgb(34 145 136);
+}
+.tab-Links {
+  margin-right: 7vw;
+  font-size: 2.3vw;
+  position: relative;
+}
+.tab-Links::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  height: 3px;
+  width: 0;
+  background-color: red;
+  cursor: pointer;
+  transition: width 1s;
+}
+.tab-Links.active-Link:after {
+  width: 100%;
+}
+.tab-Contents {
+  display: none;
+}
+.tab-Contents.tab-Active {
+  display: block;
+}
+
+.tab-Contents ul {
+  list-style: none;
+  font-size: 2.3vw;
+  /* margin-bottom: 15px; */
+  color: rgb(213 200 209);
+  font-weight: 800;
+}
+.tab-Contents ul li {
+  margin-bottom: 15px;
+}
+.tab-Contents ul li span {
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: rgb(231 41 255);
+  font-weight: 800;
+}
+/* project */
+
+#project {
+  padding: 23px 0;
+  margin-top: 15vh;
+}
+.project-List {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 40px;
+  margin: 10vw;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.sub-title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 4vw;
+}
+.project-List div {
+  background-color: rgb(44, 42, 40);
+  padding: 20px;
+  color: white;
+  font-size: 23px;
+  font-weight: 300;
+  border-radius: 20px;
+  transition: transform 1s, background-color 0.7s;
+}
+.project-List div p {
+  text-align: justify;
+}
+.project-List div h1 {
+  font-size:3vw ;
+}
+
+.project-img {
+  width: 60px;
+  height: 60px;
+}
+.project-List div:hover {
+  background-color: rgb(238, 26, 62);
+  transform: translateY(-10px);
+}
+
+.learn-more a {
+  text-decoration: none;
+  color: black;
+}
+.learn-more {
+  text-align: center;
+  border: 0;
+  background: #a3cabe;
+  border-radius: 20px;
+  width: 22vw;
+}
+
+#contact {
+  margin-top: 10vh;
+  padding-bottom: 4vh;
+  background-color: #26252f;
+}
+#contact .title {
+  font-size: 30px;
+  text-align: center;
+}
+
+
+#contact .container {
+  margin-top: 4vh;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 3vw;
+  justify-content: space-around;
+}
+.cv {
+  border-bottom: 8px double black;
+}
+.cv a {
+  text-decoration: none;
+  color: rgb(250, 250, 250);
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 1vh;
+  background-color: #2e20a7;
+}
+.sidebar{
+  display: none;
+}
+
+/* responsive web css */
+@media only screen and (max-width:407px){
+  #header{
+    height: 76vw;
+  }
+  /* .sidebar{
+    position:absolute;
+    right: 0;
+    display: block;
+    background-color: rgb(174, 11, 38);
+    z-index: 1;
+    
+
+  }
+  .sidebar-logo{
+    position: absolute;
+    right: -10px;
+    display: inline-block;
+    width: 2px;
+
+  }
+  .sidebar .container{
+    display: flex;
+    justify-content: center;
+    margin: 6vw;
+    margin-top: 2vw;
+    width: 50vw;
+    height: 100vh;
+
+  }
+  .sidebar .container ul li{
+   list-style: none;
+
+  }
+  .sidebar .container ul li a{
+   text-decoration: none; */
+
+  /* } */
+  .logo{
+    font-size: 8vw;
+  }
+  nav{
+    
+    justify-content: space-between;
+    padding: 0 29px;
+  }
+  nav ul li{
+    margin: 13px;
+    font-size: 7.6vw;
+  }
+  .side_icon{
+    display: block;
+    position: absolute;
+    right: 6vw;
+
+  }
+  nav ul{    
+    width: 67%;
+    flex-direction: column;
+    background: #572b23;
+    height: 100vh;
+    top: 0;
+    right: -400px;
+    z-index: 1;
+    position: fixed;
+    padding: 8px;
+    transition: right .5s ease-in-out;
+  }
+  #about{margin: 7vh;
+    margin-top: 5vw;
+    margin-left: 0;
+    margin-right: 3vw;
+  }
+  .tab-Contents ul li span {
+    font-size: 3vw;}
+  .aboutText {
+    font-size: 8vw;
+}
+  #project{
+    margin-top: -11vh;
+  }
+  .project-List {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .project-List div{
+    font-size: 3vh;
+  }
+  .project-List div h1{
+    font-size: 5vw;
+  }
+    
+.learn-more{
+  width: 90px;
+  font-size: 7vw;
+    height: 15vw;
+}
+.title h1{
+  font-size:14vw ;
+}
+#contact .container {
+  
+  font-size: 6vw;
+}
+}
+
+
+/* utility */
+.bright {
+  color: #39a08f;
+}
