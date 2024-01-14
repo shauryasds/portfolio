@@ -363,7 +363,7 @@ footer {
   
   font-size: 6vw;
 }
-.email,.phone,.cv{
+#email,#phone,#cv{
   padding-bottom: 5vw;
 }
 }
