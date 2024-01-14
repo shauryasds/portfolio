@@ -341,7 +341,7 @@ footer {
     margin-top: -11vh;
   }
   .project-List {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+/*     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
   }
   .project-List div{
     font-size: 3vh;
